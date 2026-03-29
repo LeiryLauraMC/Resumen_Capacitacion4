@@ -1,0 +1,1127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Creatividad al Servicio de Dios — Guión de Capacitación</title>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,400;1,700&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --yellow:  #FFD93D;
+  --orange:  #FF8C42;
+  --coral:   #FF6B6B;
+  --pink:    #FF85A1;
+  --purple:  #A855F7;
+  --blue:    #4FACFE;
+  --teal:    #2DD4BF;
+  --green:   #4ADE80;
+  --ink:     #1A1A2E;
+  --ink2:    #3D3D5C;
+  --muted:   #888;
+  --bg:      #FFF8F0;
+  --white:   #FFFFFF;
+}
+
+/* ── BASE ── */
+body {
+  font-family: 'Nunito', sans-serif;
+  background: var(--bg);
+  color: var(--ink2);
+  line-height: 1.7;
+}
+
+/* ── LAYOUT ── */
+.page { max-width: 860px; margin: 0 auto; padding: 56px 32px 80px; }
+
+/* ── COVER ── */
+.cover {
+  text-align: center;
+  margin-bottom: 64px;
+  padding: 48px 32px;
+  background: var(--white);
+  border-radius: 28px;
+  border: 2.5px solid #EDE9FE;
+  position: relative;
+  overflow: hidden;
+}
+.cover::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; height: 6px;
+  background: linear-gradient(90deg, var(--purple), var(--blue), var(--teal), var(--green), var(--yellow), var(--orange), var(--coral));
+}
+.cover-label {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--purple);
+  background: #F3E8FF;
+  padding: 5px 16px;
+  border-radius: 99px;
+  margin-bottom: 20px;
+}
+.cover h1 {
+  font-family: 'Fredoka One', cursive;
+  font-size: clamp(28px, 5vw, 48px);
+  color: var(--ink);
+  line-height: 1.15;
+  margin-bottom: 10px;
+}
+.cover h1 em {
+  font-style: normal;
+  color: var(--purple);
+}
+.cover-sub {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--muted);
+  margin-bottom: 28px;
+}
+.cover-meta {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.meta-chip {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--ink2);
+  background: var(--bg);
+  padding: 7px 16px;
+  border-radius: 99px;
+  border: 2px solid #EDE9FE;
+}
+.meta-chip .dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* ── SECTION ── */
+.section { margin-bottom: 48px; }
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+.section-num {
+  font-family: 'Fredoka One', cursive;
+  font-size: 13px;
+  letter-spacing: 1px;
+  padding: 4px 12px;
+  border-radius: 99px;
+  flex-shrink: 0;
+}
+.section-title {
+  font-family: 'Fredoka One', cursive;
+  font-size: 22px;
+  color: var(--ink);
+  line-height: 1.2;
+}
+.section-time {
+  margin-left: auto;
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--muted);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  background: #f0f0f0;
+  padding: 3px 10px;
+  border-radius: 99px;
+}
+.section-line {
+  height: 2.5px;
+  border-radius: 99px;
+  margin-bottom: 24px;
+  opacity: 0.2;
+}
+
+/* ── BLOCKS ── */
+.card {
+  background: var(--white);
+  border-radius: 18px;
+  padding: 24px 26px;
+  margin-bottom: 16px;
+  border: 2px solid #eee;
+}
+
+/* Trainer speech */
+.speech {
+  background: #F9F5FF;
+  border: 2px solid #EDE9FE;
+  border-radius: 18px;
+  padding: 20px 24px;
+  margin-bottom: 16px;
+  position: relative;
+}
+.speech::before {
+  content: '💬 Capacitador';
+  display: block;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--purple);
+  margin-bottom: 10px;
+}
+.speech p {
+  font-size: 15px;
+  color: var(--ink2);
+  line-height: 1.75;
+  font-style: italic;
+  text-align: justify;
+}
+.speech p strong { font-style: normal; color: var(--ink); }
+
+/* Principles list */
+.principle-list { list-style: none; display: grid; gap: 10px; }
+.principle-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink2);
+  line-height: 1.5;
+  text-align: justify;
+}
+.principle-list li .bullet {
+  width: 22px; height: 22px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 11px;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+.principle-list li strong { color: var(--ink); }
+
+/* Technique cards */
+.technique {
+  border-radius: 20px;
+  padding: 26px;
+  margin-bottom: 20px;
+  border: 2.5px solid transparent;
+}
+.technique-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+.technique-emoji {
+  font-size: 28px;
+  line-height: 1;
+}
+.technique-title {
+  font-family: 'Fredoka One', cursive;
+  font-size: 20px;
+  line-height: 1;
+}
+.technique-why {
+  font-size: 13px;
+  font-weight: 700;
+  opacity: 0.7;
+  margin-top: 3px;
+}
+.technique h4 {
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  opacity: 0.6;
+}
+.technique p, .technique li {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.65;
+  color: var(--ink2);
+  text-align: justify;
+}
+
+/* Example box inside technique */
+.example-box {
+  background: rgba(255,255,255,0.65);
+  border-radius: 12px;
+  padding: 16px 18px;
+  margin: 14px 0;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.65;
+  text-align: justify;
+}
+.example-box .ex-label {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  opacity: 0.55;
+}
+.example-box ul { list-style: none; display: grid; gap: 5px; }
+.example-box ul li::before { content: '▸ '; opacity: 0.5; }
+
+/* Script dialogue */
+.dialogue { display: grid; gap: 6px; margin: 12px 0; }
+.dialogue-line { display: flex; gap: 10px; font-size: 13.5px; line-height: 1.6; }
+.dialogue-line .who {
+  font-weight: 800;
+  font-size: 11px;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  margin-top: 3px;
+  opacity: 0.65;
+}
+.dialogue-line .says { font-weight: 600; font-style: italic; }
+
+/* Tips */
+.tips {
+  margin-top: 14px;
+  background: rgba(255,255,255,0.55);
+  border-radius: 10px;
+  padding: 12px 16px;
+}
+.tips .tips-label {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  opacity: 0.55;
+}
+.tips ul { list-style: none; display: grid; gap: 5px; }
+.tips ul li { font-size: 13px; font-weight: 600; line-height: 1.5; }
+.tips ul li::before { content: '✓ '; font-weight: 900; }
+
+/* ── TECHNIQUE COLOR THEMES ── */
+.tech-drama {
+  background: #FFF5F5;
+  border-color: #FECACA;
+}
+.tech-drama .technique-title { color: #B91C1C; }
+.tech-drama h4 { color: #B91C1C; }
+.tech-drama .technique-emoji-bg { background: #FEE2E2; }
+
+.tech-song {
+  background: #FFFBEB;
+  border-color: #FDE68A;
+}
+.tech-song .technique-title { color: #B45309; }
+.tech-song h4 { color: #B45309; }
+
+.tech-game {
+  background: #EFF6FF;
+  border-color: #BFDBFE;
+}
+.tech-game .technique-title { color: #1D4ED8; }
+.tech-game h4 { color: #1D4ED8; }
+
+.tech-craft {
+  background: #F0FDF4;
+  border-color: #BBF7D0;
+}
+.tech-craft .technique-title { color: #15803D; }
+.tech-craft h4 { color: #15803D; }
+
+/* ── TABLE ── */
+.ref-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  font-weight: 600;
+}
+.ref-table th {
+  background: var(--ink);
+  color: var(--white);
+  font-family: 'Fredoka One', cursive;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  padding: 10px 14px;
+  text-align: left;
+}
+.ref-table th:first-child { border-radius: 10px 0 0 0; }
+.ref-table th:last-child  { border-radius: 0 10px 0 0; }
+.ref-table td {
+  padding: 10px 14px;
+  border-bottom: 2px solid #f5f5f5;
+  color: var(--ink2);
+  vertical-align: middle;
+}
+.ref-table tr:last-child td { border-bottom: none; }
+.ref-table tr:nth-child(even) td { background: #FAFAFA; }
+.ref-table .tipo-badge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 800;
+  padding: 3px 10px;
+  border-radius: 99px;
+}
+
+/* ── STRUCTURE TABLE ── */
+.struct-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.struct-table th {
+  font-family: 'Fredoka One', cursive;
+  font-size: 13px;
+  font-weight: 400;
+  background: var(--purple);
+  color: white;
+  padding: 10px 14px;
+  text-align: left;
+}
+.struct-table th:first-child { border-radius: 10px 0 0 0; }
+.struct-table th:last-child  { border-radius: 0 10px 0 0; }
+.struct-table td {
+  padding: 10px 14px;
+  border-bottom: 2px solid #F3E8FF;
+  vertical-align: middle;
+  font-weight: 600;
+  color: var(--ink2);
+}
+.struct-table tr:last-child td { border-bottom: none; }
+.struct-table .momento {
+  font-family: 'Fredoka One', cursive;
+  font-size: 15px;
+  color: var(--ink);
+}
+.struct-table .dur {
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--purple);
+  white-space: nowrap;
+}
+
+/* ── DYNAMIC ACTIVITY ── */
+.dynamic-section {
+  background: linear-gradient(135deg, #F5F0FF 0%, #EFF6FF 100%);
+  border: 2.5px solid #DDD6FE;
+  border-radius: 20px;
+  padding: 28px;
+  margin-bottom: 16px;
+}
+.dynamic-section h3 {
+  font-family: 'Fredoka One', cursive;
+  font-size: 18px;
+  color: var(--purple);
+  margin-bottom: 16px;
+}
+.step-list { list-style: none; display: grid; gap: 14px; counter-reset: steps; }
+.step-list li {
+  counter-increment: steps;
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+.step-list li::before {
+  content: counter(steps);
+  font-family: 'Fredoka One', cursive;
+  font-size: 15px;
+  min-width: 30px; height: 30px;
+  background: var(--purple);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+.step-list li .step-content {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.6;
+  color: var(--ink2);
+}
+.step-list li .step-content strong { color: var(--ink); }
+
+/* Niños ficticios */
+.kids-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 12px;
+  margin: 16px 0;
+}
+.kid-card {
+  background: var(--white);
+  border-radius: 14px;
+  padding: 14px 16px;
+  border: 2px solid #EDE9FE;
+}
+.kid-name {
+  font-family: 'Fredoka One', cursive;
+  font-size: 16px;
+  color: var(--ink);
+  margin-bottom: 2px;
+}
+.kid-age {
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--muted);
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.kid-desc {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink2);
+  line-height: 1.5;
+}
+
+/* ── ERRORS ── */
+.errors-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 12px;
+}
+.error-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  background: #FFF5F5;
+  border: 2px solid #FECACA;
+  border-radius: 12px;
+  padding: 14px 16px;
+}
+.error-x {
+  font-size: 16px;
+  line-height: 1;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+.error-text {
+  font-size: 13px;
+  font-weight: 700;
+  color: #B91C1C;
+  line-height: 1.5;
+}
+
+/* ── QUESTIONS PREP ── */
+.questions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 14px;
+}
+.question-card {
+  border-radius: 14px;
+  padding: 18px;
+  border: 2.5px solid;
+}
+.question-card .q-num {
+  font-family: 'Fredoka One', cursive;
+  font-size: 28px;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+.question-card .q-text {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.4;
+  margin-bottom: 6px;
+}
+.question-card .q-sub {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--muted);
+  line-height: 1.4;
+}
+
+/* ── CLOSING ── */
+.closing {
+  background: linear-gradient(135deg, #F3E8FF 0%, #EFF6FF 50%, #F0FDF4 100%);
+  border-radius: 20px;
+  padding: 36px 32px;
+  text-align: center;
+  border: 2.5px solid #DDD6FE;
+}
+.closing blockquote {
+  font-family: 'Fredoka One', cursive;
+  font-size: clamp(16px, 3vw, 22px);
+  color: var(--purple);
+  line-height: 1.4;
+  margin-bottom: 12px;
+}
+.closing cite {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--muted);
+  font-style: normal;
+  letter-spacing: 0.5px;
+}
+.closing-speech {
+  font-size: 15px;
+  font-weight: 600;
+  font-style: italic;
+  color: var(--ink2);
+  line-height: 1.75;
+  max-width: 580px;
+  margin: 0 auto 24px;
+  text-align: justify;
+}
+
+/* ── FOOTER ── */
+.footer {
+  text-align: center;
+  margin-top: 56px;
+  padding-top: 32px;
+  border-top: 2px solid #eee;
+}
+.footer-org {
+  font-family: 'Fredoka One', cursive;
+  font-size: 18px;
+  color: var(--purple);
+}
+.footer-sub {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--muted);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+.footer-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 16px;
+}
+.footer-dots span {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* ── SECTION COLORS ── */
+.s-intro .section-num   { background: #F3E8FF; color: var(--purple); }
+.s-intro .section-line  { background: var(--purple); }
+.s-intro .section-title { color: var(--ink); }
+
+.s-why .section-num   { background: #DBEAFE; color: #1D4ED8; }
+.s-why .section-line  { background: #1D4ED8; }
+
+.s-tech .section-num  { background: #FEE2E2; color: #B91C1C; }
+.s-tech .section-line { background: #B91C1C; }
+
+.s-types .section-num  { background: #FEF9C3; color: #B45309; }
+.s-types .section-line { background: #B45309; }
+
+.s-tools .section-num  { background: #DBEAFE; color: #1D4ED8; }
+.s-tools .section-line { background: #1D4ED8; }
+
+.s-struct .section-num  { background: #F3E8FF; color: var(--purple); }
+.s-struct .section-line { background: var(--purple); }
+
+.s-dynamic .section-num  { background: #F0FDF4; color: #15803D; }
+.s-dynamic .section-line { background: #15803D; }
+
+.s-errors .section-num  { background: #FEE2E2; color: #B91C1C; }
+.s-errors .section-line { background: #B91C1C; }
+
+.s-close .section-num  { background: #F3E8FF; color: var(--purple); }
+.s-close .section-line { background: var(--purple); }
+
+/* ── UTILITY ── */
+.mt-0 { margin-top: 0; }
+.mb-12 { margin-bottom: 12px; }
+.divider { height: 1px; background: #eee; margin: 20px 0; }
+
+@media print {
+  .page { padding: 24px; }
+  .technique, .card, .speech { break-inside: avoid; }
+}
+</style>
+</head>
+<body>
+
+<div class="page">
+
+  <!-- ══ COVER ══ -->
+  <div class="cover">
+    <div class="cover-label">Guión de Capacitación</div>
+    <h1>Creatividad al<br><em>Servicio de Dios</em></h1>
+    <p class="cover-sub">Técnicas creativas para dar clases a niños de 6 a 9 años</p>
+    <div class="cover-meta">
+      <div class="meta-chip">
+        <span class="dot" style="background:var(--purple)"></span>
+        Duración: 55 – 65 min
+      </div>
+      <div class="meta-chip">
+        <span class="dot" style="background:var(--blue)"></span>
+        Modalidad virtual
+      </div>
+      <div class="meta-chip">
+        <span class="dot" style="background:var(--green)"></span>
+        7 secciones
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ══ SECCIÓN 0: INTRODUCCIÓN ══ -->
+  <div class="section s-intro">
+    <div class="section-header">
+      <div class="section-num">Intro</div>
+      <div class="section-title">Introducción</div>
+      <div class="section-time">5 min</div>
+    </div>
+    <div class="section-line"></div>
+
+    <div class="speech">
+      <p>"Gracias por estar aquí. Enseñar a un niño no es solo ocuparlo un rato — <strong>es formar su corazón</strong>.</p>
+      <p>Y para eso, necesitamos aprender a enseñar <strong>como los niños aprenden</strong>.</p>
+      <p>Hoy vamos a recorrer un camino sencillo: entender cómo aprenden los niños, conocer técnicas creativas con ejemplos reales que puedes usar el próximo domingo, y practicar juntos.</p>
+      <p>¿Listos? Empecemos."</p>
+    </div>
+  </div>
+
+
+  <!-- ══ SECCIÓN 1: FUNDAMENTO ══ -->
+  <div class="section s-why">
+    <div class="section-header">
+      <div class="section-num">1</div>
+      <div class="section-title">Fundamento: ¿Por qué usar técnicas creativas?</div>
+      <div class="section-time">8 min</div>
+    </div>
+    <div class="section-line"></div>
+
+    <div class="speech">
+      <p>"Los niños no aprenden como nosotros. Ellos no llegan con un cuaderno listos para escuchar 40 minutos.</p>
+      <p>Los niños aprenden jugando, imitando, repitiendo y usando el cuerpo, los sentidos y las emociones.</p>
+      <p>Cuando un niño se mueve, toca, canta, dibuja o actúa — el mensaje no solo entra a su cabeza, <strong>también baja a su corazón</strong>."</p>
+    </div>
+
+    <div class="card">
+      <h4 style="font-size:12px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;color:var(--muted);margin-bottom:16px;">Principios clave del aprendizaje infantil</h4>
+      <ul class="principle-list">
+        <li>
+          <span class="bullet" style="background:#DBEAFE;color:#1D4ED8;">⏱</span>
+          <span><strong>Atención corta:</strong> entre 5 y 15 minutos según la edad</span>
+        </li>
+        <li>
+          <span class="bullet" style="background:#FEF9C3;color:#B45309;">🎨</span>
+          <span><strong>Necesitan variedad:</strong> una sola actividad no alcanza</span>
+        </li>
+        <li>
+          <span class="bullet" style="background:#DCFCE7;color:#15803D;">👁</span>
+          <span><strong>Responden mejor a lo visual y lo concreto</strong></span>
+        </li>
+        <li>
+          <span class="bullet" style="background:#FEE2E2;color:#B91C1C;">❤</span>
+          <span><strong>Recuerdan lo que les hace sentir algo</strong></span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+
+  <!-- ══ SECCIÓN 2: LAS 4 TÉCNICAS ══ -->
+  <div class="section s-tech">
+    <div class="section-header">
+      <div class="section-num">2</div>
+      <div class="section-title">Las 4 grandes técnicas creativas</div>
+      <div class="section-time">25 min</div>
+    </div>
+    <div class="section-line"></div>
+
+    <p style="font-size:14px;font-weight:600;color:var(--muted);margin-bottom:24px;">Presentar cada técnica con: definición + ejemplo vivo + consejo práctico.</p>
+
+    <!-- TÉCNICA 1 -->
+    <div class="technique tech-drama">
+      <div class="technique-header">
+        <div class="technique-emoji">🎭</div>
+        <div>
+          <div class="technique-title">Técnica 1: Drama / Dramatización</div>
+          <div class="technique-why">Los niños de 6-9 años disfrutan actuar — y cuando interpretan, sienten</div>
+        </div>
+      </div>
+
+      <h4>¿Qué es?</h4>
+      <p style="margin-bottom:14px;">Representar una historia bíblica usando el cuerpo, la voz y la expresión. No se necesitan disfraces elaborados — alcanza con un pañuelo, una silla o las manos.</p>
+
+      <div class="example-box">
+        <div class="ex-label">Ejemplo: El ciego Bartimeo — Marcos 10:46-52</div>
+        <p style="margin-bottom:10px;font-size:13px;"><strong>Roles:</strong> Jesús · Bartimeo · La multitud (todos los demás niños)</p>
+        <div class="dialogue">
+          <div class="dialogue-line"><span class="who">Bartimeo</span><span class="says">"¡Jesús, hijo de David, ten compasión de mí!" (sentado en el piso, ojos cerrados)</span></div>
+          <div class="dialogue-line"><span class="who">Multitud</span><span class="says">"¡Shhh, silencio!" (intentan callarlo)</span></div>
+          <div class="dialogue-line"><span class="who">Bartimeo</span><span class="says">Grita más fuerte</span></div>
+          <div class="dialogue-line"><span class="who">Jesús</span><span class="says">"¿Qué quieres que haga por ti?"</span></div>
+          <div class="dialogue-line"><span class="who">Bartimeo</span><span class="says">"¡Que pueda ver!"</span></div>
+          <div class="dialogue-line"><span class="who">Jesús</span><span class="says">"Tu fe te ha salvado." (Bartimeo abre los ojos y salta de alegría)</span></div>
+        </div>
+        <div class="divider"></div>
+        <p style="font-size:13px;"><strong>Reflexión posterior:</strong> "¿Cómo se sintió Bartimeo cuando la gente lo calló? ¿Y cuando Jesús lo escuchó?"</p>
+      </div>
+
+      <div class="tips">
+        <div class="tips-label">Tips para el maestro</div>
+        <ul>
+          <li>Ensaya tú primero en casa aunque sea 2 minutos</li>
+          <li>Si un niño no quiere actuar, puede ser "narrador"</li>
+          <li>Mantén los dramatizados en menos de 5 minutos</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- TÉCNICA 2 -->
+    <div class="technique tech-song">
+      <div class="technique-header">
+        <div class="technique-emoji">🎵</div>
+        <div>
+          <div class="technique-title">Técnica 2: Canciones con movimiento</div>
+          <div class="technique-why">La melodía es el mejor ancla de memoria que existe</div>
+        </div>
+      </div>
+
+      <h4>¿Qué es?</h4>
+      <p style="margin-bottom:14px;">Usar una canción que refuerce el mensaje central de la clase, con gestos o coreografía simple que los niños puedan seguir.</p>
+
+      <div class="example-box">
+        <div class="ex-label">Ejemplo 1: "Dios me cuida" — historia del Buen Pastor</div>
+        <p style="font-style:italic;margin-bottom:10px;font-size:13px;">
+          "Dios me cuida, me conoce,<br>
+          sabe mi nombre y me llama,<br>
+          soy su oveja, él es mi pastor,<br>
+          ¡nunca me abandona, no!"
+        </p>
+        <ul>
+          <li>"Dios me cuida" → abrazar el propio cuerpo</li>
+          <li>"Me conoce" → señalarse el pecho</li>
+          <li>"Sabe mi nombre" → señalarse a sí mismos</li>
+          <li>"Soy su oveja" → hacer cuernitos con los dedos</li>
+          <li>"¡Nunca me abandona!" → agitar las manos arriba</li>
+        </ul>
+      </div>
+
+      <div class="example-box">
+        <div class="ex-label">Ejemplo 2: Frase de anclaje cantada (cualquier clase)</div>
+        <p style="font-size:13px;margin-bottom:8px;">Convierte la verdad central de tu clase en un canto de 2 líneas. <strong>Ejemplo:</strong></p>
+        <p style="font-style:italic;font-size:14px;">"Dios cumple, cumple, cumple — ¡sus promesas cumple!"</p>
+        <p style="font-size:12px;color:var(--muted);margin-top:6px;">Repetir 3 veces, cada vez más rápido, con palmadas.</p>
+      </div>
+
+      <div class="tips">
+        <div class="tips-label">Tips para el maestro</div>
+        <ul>
+          <li>No necesitas saber cantar bien — solo cantar con confianza</li>
+          <li>Repite la canción al inicio y al cierre como "bookends"</li>
+          <li>Con niños de 8-9 años, pídeles que inventen los gestos</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- TÉCNICA 3 -->
+    <div class="technique tech-game">
+      <div class="technique-header">
+        <div class="technique-emoji">🎮</div>
+        <div>
+          <div class="technique-title">Técnica 3: Juegos dirigidos</div>
+          <div class="technique-why">En alerta aprenden mejor — y los juegos los ponen en alerta</div>
+        </div>
+      </div>
+
+      <h4>¿Qué es?</h4>
+      <p style="margin-bottom:14px;">Un juego con reglas claras, tiempo corto y conexión directa con el mensaje. No es tiempo libre — es <strong>aprendizaje en movimiento</strong>.</p>
+
+      <div class="example-box">
+        <div class="ex-label">Juego 1: "¿Verdad o mentira?" — 5 min · repaso de cualquier historia</div>
+        <p style="margin-bottom:8px;font-size:13px;">El maestro dice una frase. Si es verdad: los niños <strong>saltan</strong>. Si es mentira: <strong>se agachan</strong>.</p>
+        <p style="font-size:13px;margin-bottom:6px;"><strong>Frases ejemplo (historia de Noé):</strong></p>
+        <ul>
+          <li>"Noé construyó un arca" → ✅ saltar</li>
+          <li>"Noé metió tres animales" → ❌ agacharse</li>
+          <li>"Llovió 40 días y 40 noches" → ✅ saltar</li>
+          <li>"El arco iris fue señal de castigo" → ❌ agacharse</li>
+        </ul>
+        <p style="font-size:12px;color:var(--muted);margin-top:8px;">Variación: en vez de moverse, decir "¡Amén!" o "¡Noooo!"</p>
+      </div>
+
+      <div class="example-box">
+        <div class="ex-label">Juego 2: "La cadena de versículos" — 5 min · memorización</div>
+        <p style="font-size:13px;">El maestro dice la primera palabra del versículo. Un niño dice la siguiente. En cadena hasta completarlo. Si alguien falla, se empieza de nuevo (sin presión, con risas).</p>
+        <p style="font-size:13px;margin-top:8px;font-style:italic;">Versículo ejemplo: "Porque de tal manera amó Dios al mundo..." — Juan 3:16</p>
+      </div>
+
+      <div class="example-box">
+        <div class="ex-label">Juego 3: "Misión bíblica" — 8-10 min · aplicación práctica</div>
+        <p style="font-size:13px;margin-bottom:8px;">El maestro plantea una situación de la vida real. Los equipos tienen 1 minuto para decidir qué haría el personaje bíblico que estudiaron. Comparten su respuesta.</p>
+        <p style="font-size:13px;"><strong>Situación ejemplo (El Buen Samaritano):</strong><br>
+        <em>"Vas camino a la iglesia y ves a un compañero llorando solo en el parque. Llegas tarde. ¿Qué haces?"</em></p>
+      </div>
+
+      <div class="tips">
+        <div class="tips-label">Tips para todos los juegos</div>
+        <ul>
+          <li>Explica las reglas y haz un ensayo corto antes de jugar en serio</li>
+          <li>Nunca uses juegos para avergonzar a quien no sabe la respuesta</li>
+          <li>Ten listo el siguiente paso para cuando termine el juego</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- TÉCNICA 4 -->
+    <div class="technique tech-craft">
+      <div class="technique-header">
+        <div class="technique-emoji">✋</div>
+        <div>
+          <div class="technique-title">Técnica 4: Manualidades con propósito</div>
+          <div class="technique-why">Si el niño no puede explicar qué hizo, la manualidad no cumplió su objetivo</div>
+        </div>
+      </div>
+
+      <h4>¿Qué es?</h4>
+      <p style="margin-bottom:14px;">Una actividad con las manos que refuerza la enseñanza — no como relleno, sino como <strong>cierre significativo</strong>.</p>
+
+      <div class="example-box">
+        <div class="ex-label">Ejemplo: "Mi escudo de fe" — historia de David y Goliat</div>
+        <p style="font-size:13px;margin-bottom:8px;"><strong>Materiales:</strong> Cartón, papel de colores, marcadores</p>
+        <p style="font-size:13px;margin-bottom:8px;"><strong>Instrucción:</strong> Recortar la forma de un escudo. Escribir adentro:</p>
+        <ul>
+          <li>Una cosa que me da miedo</li>
+          <li>Una promesa de Dios que me ayuda con ese miedo</li>
+        </ul>
+        <div class="divider"></div>
+        <p style="font-size:13px;font-style:italic;">"David no tenía armadura, pero tenía fe. ¿Cuál es tu escudo?"</p>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ══ SECCIÓN 3: TIPOS DE APRENDIZAJE ══ -->
+  <div class="section s-types">
+    <div class="section-header">
+      <div class="section-num">3</div>
+      <div class="section-title">Tipos de aprendizaje</div>
+      <div class="section-time">5 min</div>
+    </div>
+    <div class="section-line"></div>
+
+    <p style="font-size:14px;font-weight:600;color:var(--muted);margin-bottom:16px;">Proyectar o entregar como handout. Una buena clase combina varios tipos.</p>
+
+    <div class="card" style="padding:0;overflow:hidden;">
+      <table class="ref-table">
+        <thead>
+          <tr>
+            <th>Tipo</th>
+            <th>Aprende…</th>
+            <th>Técnica ideal</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="tipo-badge" style="background:#DBEAFE;color:#1D4ED8;">👁 Visual</span></td>
+            <td>Viendo imágenes</td>
+            <td>Láminas, objetos reales</td>
+          </tr>
+          <tr>
+            <td><span class="tipo-badge" style="background:#FEF9C3;color:#B45309;">👂 Auditivo</span></td>
+            <td>Escuchando y repitiendo</td>
+            <td>Canciones, rimas, voces</td>
+          </tr>
+          <tr>
+            <td><span class="tipo-badge" style="background:#FEE2E2;color:#B91C1C;">🏃 Kinestésico</span></td>
+            <td>Moviéndose</td>
+            <td>Dramas, juegos físicos</td>
+          </tr>
+          <tr>
+            <td><span class="tipo-badge" style="background:#F3E8FF;color:#7E22CE;">✋ Táctil</span></td>
+            <td>Con las manos</td>
+            <td>Manualidades</td>
+          </tr>
+          <tr>
+            <td><span class="tipo-badge" style="background:#DCFCE7;color:#15803D;">👥 Social</span></td>
+            <td>En grupo</td>
+            <td>Juegos cooperativos</td>
+          </tr>
+          <tr>
+            <td><span class="tipo-badge" style="background:#FFE4E6;color:#9F1239;">❤ Emocional</span></td>
+            <td>Sintiendo</td>
+            <td>Historias, reflexión, oración</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="speech" style="margin-top:16px;">
+      <p>"Una buena clase no elige uno solo — <strong>los combina</strong>. Pueden guardar esta tabla y consultarla antes de preparar su clase."</p>
+    </div>
+  </div>
+
+
+  <!-- ══ SECCIÓN 4: HERRAMIENTAS TECNOLÓGICAS ══ -->
+  <div class="section s-tools">
+    <div class="section-header">
+      <div class="section-num">4</div>
+      <div class="section-title">Herramientas tecnológicas</div>
+      <div class="section-time">5 min</div>
+    </div>
+    <div class="section-line"></div>
+
+    <div class="speech">
+      <p>"Hay recursos digitales que pueden hacer sus clases más dinámicas — y lo mejor es que la mayoría son gratis."</p>
+    </div>
+
+    <div class="card" style="background:#EFF6FF;border-color:#BFDBFE;display:flex;align-items:flex-start;gap:14px;">
+      <div style="font-size:28px;line-height:1;flex-shrink:0;margin-top:2px;">📋</div>
+      <div>
+        <p style="font-weight:800;color:var(--ink);font-size:15px;margin-bottom:4px;">Entregar / proyectar la Cheat Sheet de herramientas</p>
+        <p style="font-size:13px;font-weight:600;color:var(--ink2);">No se trata de usar tecnología siempre — se trata de <strong>tenerla lista cuando suma</strong>. La tarjeta queda para consultar antes de preparar cada clase.</p>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ══ SECCIÓN 5: ESTRUCTURA ══ -->
+  <div class="section s-struct">
+    <div class="section-header">
+      <div class="section-num">5</div>
+      <div class="section-title">Estructura de una clase creativa</div>
+      <div class="section-time">5 min</div>
+    </div>
+    <div class="section-line"></div>
+
+    <div class="questions-grid" style="margin-bottom:20px;">
+      <div class="question-card" style="background:#F3E8FF;border-color:#DDD6FE;">
+        <div class="q-num" style="color:var(--purple);">01</div>
+        <div class="q-text">¿Qué quiero que el niño aprenda?</div>
+        <div class="q-sub">Verdad bíblica central</div>
+      </div>
+      <div class="question-card" style="background:#FFF5F5;border-color:#FECACA;">
+        <div class="q-num" style="color:#B91C1C;">02</div>
+        <div class="q-text">¿Qué quiero que el niño sienta?</div>
+        <div class="q-sub">Conexión emocional</div>
+      </div>
+      <div class="question-card" style="background:#F0FDF4;border-color:#BBF7D0;">
+        <div class="q-num" style="color:#15803D;">03</div>
+        <div class="q-text">¿Qué quiero que el niño haga?</div>
+        <div class="q-sub">Aplicación práctica</div>
+      </div>
+    </div>
+
+    <div class="card" style="padding:0;overflow:hidden;">
+      <table class="struct-table">
+        <thead>
+          <tr>
+            <th>Momento</th>
+            <th>Duración</th>
+            <th>Técnica sugerida</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="momento">Bienvenida creativa</span></td>
+            <td><span class="dur">3 min</span></td>
+            <td>Canción o juego rompehielo</td>
+          </tr>
+          <tr>
+            <td><span class="momento">Historia bíblica</span></td>
+            <td><span class="dur">8-10 min</span></td>
+            <td>Storytelling + objeto real</td>
+          </tr>
+          <tr>
+            <td><span class="momento">Actividad creativa</span></td>
+            <td><span class="dur">8-10 min</span></td>
+            <td>Drama, juego o manualidad</td>
+          </tr>
+          <tr>
+            <td><span class="momento">Aplicación</span></td>
+            <td><span class="dur">3-5 min</span></td>
+            <td>Reflexión o versículo</td>
+          </tr>
+          <tr>
+            <td><span class="momento">Cierre</span></td>
+            <td><span class="dur">3 min</span></td>
+            <td>Repetir canción / oración</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+  <!-- ══ SECCIÓN 6: ERRORES COMUNES ══ -->
+  <div class="section s-errors">
+    <div class="section-header">
+      <div class="section-num">6</div>
+      <div class="section-title">Errores comunes a evitar</div>
+      <div class="section-time">3 min</div>
+    </div>
+    <div class="section-line"></div>
+
+    <div class="errors-grid">
+      <div class="error-item">
+        <div class="error-x">❌</div>
+        <div class="error-text">Hablar demasiado sin involucrar a los niños</div>
+      </div>
+      <div class="error-item">
+        <div class="error-x">❌</div>
+        <div class="error-text">Actividades sin conexión clara con la enseñanza</div>
+      </div>
+      <div class="error-item">
+        <div class="error-x">❌</div>
+        <div class="error-text">Comparar a los niños entre sí</div>
+      </div>
+      <div class="error-item">
+        <div class="error-x">❌</div>
+        <div class="error-text">Improvisar sin planificación previa</div>
+      </div>
+      <div class="error-item">
+        <div class="error-x">❌</div>
+        <div class="error-text">Usar juegos como relleno de tiempo</div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ══ SECCIÓN 7: CIERRE ══ -->
+  <div class="section s-close">
+    <div class="section-header">
+      <div class="section-num">7</div>
+      <div class="section-title">Cierre de la capacitación</div>
+      <div class="section-time">3 min</div>
+    </div>
+    <div class="section-line"></div>
+
+    <div class="closing">
+      <p class="closing-speech">
+        "La creatividad se aprende y se practica.<br>
+        No necesitan mucho dinero — necesitan <strong>intención</strong>.<br>
+        Cada uno puede desarrollar su propio estilo.<br><br>
+        Recuerden: una clase creativa no se mide por el ruido, sino por el <strong>impacto</strong>.<br><br>
+        Dios usa sus manos, su voz y su creatividad."
+      </p>
+      <blockquote>"Enseñar a un niño es sembrar eternidad en un corazón pequeño."</blockquote>
+      <cite>"Instruye al niño en su camino, y aun cuando fuere viejo no se apartará de él." — Proverbios 22:6</cite>
+    </div>
+  </div>
+
+
+  <!-- ══ FOOTER ══ -->
+  <div class="footer">
+    <div class="footer-dots">
+      <span style="background:var(--yellow)"></span>
+      <span style="background:var(--coral)"></span>
+      <span style="background:var(--purple)"></span>
+      <span style="background:var(--blue)"></span>
+      <span style="background:var(--teal)"></span>
+      <span style="background:var(--green)"></span>
+      <span style="background:var(--orange)"></span>
+    </div>
+    <div class="footer-org">Ministerio Infantil Semilleros</div>
+    <div class="footer-sub">Iglesia Gosén · Capacitación 2026</div>
+  </div>
+
+</div><!-- /page -->
+</body>
+</html>
