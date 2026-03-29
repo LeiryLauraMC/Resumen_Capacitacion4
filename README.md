@@ -4,7 +4,7 @@
 [Abrir proyección](https://leirylauramc.github.io/Capacitacion4/Diapos.html)
 
 ## 🖥️ Cheat sheet
-[Abrir proyección](https://leirylauramc.github.io/Capacitacion4/)
+[Abrir proyección](https://leirylauramc.github.io/Capacitacion4/Cheat_sheet.html)
 
 ## 📱 Guion 
-[Abrir guion](https://leirylauramc.github.io/Capacitacion4/Guion_Capacitacion4.html)
+[Abrir guion](https://leirylauramc.github.io/Capacitacion4/Guion.html)
