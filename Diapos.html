@@ -227,7 +227,7 @@ html,body{width:100%;height:100%;overflow:hidden;background:#0e0b1e;cursor:none}
     <div class="floater" style="--dur:10s;--del:.3s;--ty:-20px;--r0:-8deg;--r1:6deg;--op:.1;top:7%;left:4%"><svg width="96" height="96" viewBox="0 0 96 96"><polygon points="48,5 92,78 4,78" fill="var(--bl)"/></svg></div>
     <div class="slabel" style="margin-bottom:10px">Para que nadie se quede atrás</div>
     <div class="h2" style="margin-bottom:18px">Tipos de aprendizaje</div>
-    <div class="tipos-grid" id="tg4">
+    <div class="tipos-grid" id="tg4" style="grid-template-columns:repeat(2,1fr);max-width:680px">
       <div class="tipo-card" style="background:rgba(79,172,254,.12);border:1.5px solid rgba(79,172,254,.26)">
         <div class="t-icon" style="background:rgba(79,172,254,.2)"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--bl)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
         <div class="t-name" style="color:var(--bl)">Visual</div>
@@ -240,29 +240,17 @@ html,body{width:100%;height:100%;overflow:hidden;background:#0e0b1e;cursor:none}
         <div class="t-sub">aprende escuchando</div>
         <div class="t-tech" style="color:rgba(255,255,255,.82)">Canciones y rimas</div>
       </div>
+      <div class="tipo-card" style="background:rgba(74,222,128,.12);border:1.5px solid rgba(74,222,128,.26)">
+        <div class="t-icon" style="background:rgba(74,222,128,.2)"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--gr)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div>
+        <div class="t-name" style="color:var(--gr)">Lector / escritor</div>
+        <div class="t-sub">aprende leyendo y escribiendo</div>
+        <div class="t-tech" style="color:rgba(255,255,255,.82)">Notas, listas y textos</div>
+      </div>
       <div class="tipo-card" style="background:rgba(255,107,107,.12);border:1.5px solid rgba(255,107,107,.26)">
         <div class="t-icon" style="background:rgba(255,107,107,.2)"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--c)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
         <div class="t-name" style="color:var(--c)">Kinestésico</div>
         <div class="t-sub">aprende moviéndose</div>
         <div class="t-tech" style="color:rgba(255,255,255,.82)">Dramas y juegos físicos</div>
-      </div>
-      <div class="tipo-card" style="background:rgba(168,85,247,.12);border:1.5px solid rgba(168,85,247,.26)">
-        <div class="t-icon" style="background:rgba(168,85,247,.2)"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--pu)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 11V6a2 2 0 0 0-2-2 2 2 0 0 0-2 2v0M14 10V4a2 2 0 0 0-2-2 2 2 0 0 0-2 2v2M10 10.5V6a2 2 0 0 0-2-2 2 2 0 0 0-2 2v8"/><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"/></svg></div>
-        <div class="t-name" style="color:var(--pu)">Táctil</div>
-        <div class="t-sub">aprende con las manos</div>
-        <div class="t-tech" style="color:rgba(255,255,255,.82)">Manualidades</div>
-      </div>
-      <div class="tipo-card" style="background:rgba(74,222,128,.12);border:1.5px solid rgba(74,222,128,.26)">
-        <div class="t-icon" style="background:rgba(74,222,128,.2)"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--gr)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
-        <div class="t-name" style="color:var(--gr)">Social</div>
-        <div class="t-sub">aprende en grupo</div>
-        <div class="t-tech" style="color:rgba(255,255,255,.82)">Juegos cooperativos</div>
-      </div>
-      <div class="tipo-card" style="background:rgba(255,133,161,.12);border:1.5px solid rgba(255,133,161,.26)">
-        <div class="t-icon" style="background:rgba(255,133,161,.2)"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--pk)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
-        <div class="t-name" style="color:var(--pk)">Emocional</div>
-        <div class="t-sub">aprende sintiendo</div>
-        <div class="t-tech" style="color:rgba(255,255,255,.82)">Historias y reflexión</div>
       </div>
     </div>
     <div class="sub" style="margin-top:14px;font-size:13px;color:rgba(255,255,255,.28)">Una buena clase combina varios. No elige solo uno.</div>
@@ -475,7 +463,7 @@ html,body{width:100%;height:100%;overflow:hidden;background:#0e0b1e;cursor:none}
     <div class="sub" style="margin-bottom:16px">Memorización, esgrima bíblico y retos de versículo</div>
     <div class="tech-rows" id="trD">
       <div class="trow" style="background:rgba(168,85,247,.1);border:1.5px solid rgba(168,85,247,.2)">
-        <div class="trow-title" style="color:var(--pu)">Esgrima bíblico</div>
+        <div class="trow-title" style="color:var(--pu)">Esgrima Bíblico</div>
         <div class="trow-desc">Dos participantes frente a frente. El líder da una categoría (libro, personaje, tema) y el primero en citar un versículo relevante gana el punto. Rápido, retador y afianza el conocimiento de la Biblia.</div>
       </div>
       <div class="trow" style="background:rgba(79,172,254,.1);border:1.5px solid rgba(79,172,254,.2)">
